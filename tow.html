@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vehicle Tow Service Request</title>
+    <link href="tow.css" rel="stylesheet">
+</head>
+<body>
+    <div id="form-container">
+        <h2>Vehicle Tow Service</h2>
+        <form id="vehicle-tow-form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="vehicle-location">Vehicle Location:</label>
+            <button class="location-btn" onclick="getLocation()">
+                <img src="location.png" alt="Location Icon" />
+                Share Location
+            </button>
+
+            <label for="brand">Vehicle Make:</label>
+            <select id="brand" name="brand">
+                <option value="">Select Make</option>
+                <option value="Audi">Audi</option>
+                <option value="Chevrolet">Chevrolet</option>
+                <option value="Ford">Ford</option>
+                <option value="Hyundai">Hyundai</option>
+                <option value="Kia">Kia</option>
+                <option value="Lexus">Lexus</option>
+                <option value="Mercedes-Benz">Mercedes-Benz</option>
+                <option value="Nissan">Nissan</option>
+                <option value="Porsche">Porsche</option>
+                <option value="Subaru">Subaru</option>
+                <option value="Volkswagen">Volkswagen</option>
+            </select>
+            
+            <label for="vehicle-model">Vehicle Model:</label>
+            <input type="text" id="vehicle-model" name="vehicle-model" required>
+
+            <label for="year">Vehicle Year:</label>
+            <select id="year" name="year">
+                <option value="">Select Year</option>
+                <!-- Options for years -->
+                <script>
+                    const currentYear = new Date().getFullYear();
+                    for (let i = currentYear; i >= 1980; i--) {
+                        document.write('<option value="' + i + '">' + i + '</option>');
+                    }
+                </script>
+            </select>
+
+            <label for="vehicle-color">Vehicle Color:</label>
+            <input type="text" id="vehicle-color" name="vehicle-color" required>
+
+            <button type="submit">Submit Request</button>
+        </form>
+    </div>
+
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+
+        function showPosition(position) {
+            alert("Latitude: " + position.coords.latitude + "\nLongitude: " + position.coords.longitude);
+        }
+
+        function showError(error) {
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    alert("User denied the request for Geolocation.");
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    alert("Location information is unavailable.");
+                    break;
+                case error.TIMEOUT:
+                    alert("The request to get user location timed out.");
+                    break;
+                case error.UNKNOWN_ERROR:
+                    alert("An unknown error occurred.");
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
