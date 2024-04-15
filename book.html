@@ -1,0 +1,35 @@
+<html>
+
+<head>
+	<title>Book Your Table</title>
+	<link rel="stylesheet" href="book.css">
+	<script src="https://kit.fontawesome.com/yourcode.js"></script>
+	<script src="scripts.js"></script>
+</head>
+
+<body>
+	<div class="bg">
+		<div class="container">
+			<h1>Book Your Table</h1>
+			<form id="booking-form">
+				<input type="text" id="name" placeholder="Name" required>
+				<input type="email" id="email" placeholder="Email" required>
+				<input type="tel" id="phone" placeholder="Phone Number" required>
+				<input type="date" id="date" placeholder="Date" required>
+				<input type="time" id="time" placeholder="Time" required>
+				<input type="number" id="guests" min="1" placeholder="Number of Guests" required>
+				<button type="submit" id="book-btn">Book Now</button>
+			</form>
+		</div>
+
+	</div>
+</body>
+<script>
+	let btn = document.getElementById('book-btn');
+	btn.addEventListener('click', messagealert);
+	function messagealert() {
+		alert('Your table has been booked successfully');
+	}
+</script>
+
+</html>
