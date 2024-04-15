@@ -1,0 +1,47 @@
+<html>
+
+<head>
+	<title>Book Your Table</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://kit.fontawesome.com/yourcode.js"></script>
+	<script src="mainweb.js"></script>
+</head>
+
+<body>
+	<div class="bg">
+		<div class="container">
+			<h1>Order Now</h1>
+			<form id="booking-form">
+				<div class="row">
+					
+						
+					
+					<div class="col">
+						<input type="text" id="name" placeholder="Name" required>
+						<input type="text" id="email" placeholder="Address" required>
+						<input type="tel" id="phone" placeholder="Phone Number" required>
+                        <div class="med">
+						<label for="gender">Gender:</label>
+						<input type="radio" id="male" name="gender" value="male" required>
+						<label for="male">Male</label>
+						<input type="radio" id="female" name="gender" value="female" required>
+						<label for="female">Female</label><br>
+                    </div><br>
+						<input type="text" id="dwai" placeholder="Medicines Required" required>
+						<input type="text" id="docotr" placeholder="Doctor Prescription (if any)" required>
+						<input type="number" id="guests" min="1" placeholder="How much needed" required>
+						<button type="submit" id="book-btn">Order Now</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+<script>
+	let btn = document.getElementById('book-btn');
+	btn.addEventListener('click', messagealert);
+	function messagealert() {
+		alert('Order placed successfully');
+	}
+</script>
+</html>

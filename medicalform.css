@@ -1,0 +1,74 @@
+/* mainweb.css */
+
+/* Add your CSS styles here */
+body {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #2f78ec;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Add the background-image property with the full-size image */
+    background-image: url('medicine12.png.png');
+    background-size:cover;
+    backdrop-filter: blur(90px);;
+   
+    
+  }
+.bg {
+    background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(29,251,253,1) 44%, rgba(252,176,69,1) 100%);
+    padding: 20px;
+    height: 100vh; /* Ensure full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(132deg, rgb(31, 207, 195) 13.12%, rgb(31, 145, 207) 66.48%);
+
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    text-decoration: solid;
+    text-transform: uppercase;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="number"] {
+    width: calc(100% - 22px); /* Adjust for input padding and border */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+.med{
+    text-align:justify;
+    margin-top: 10px; 
+}
