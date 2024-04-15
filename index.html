@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>City Pulse</title>
+    <link rel="shortcut icon" href="https://blinkit.com/images/faviconChange.ico" type="image/x-icon">
+    <link rel="stylesheet" href="mainpage.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico&effect=fire">
+
+  </head>
+  <header>
+    <input type ="checkbox" name ="" id ="chk1">
+    <div class="logo"><img src="1707658661437-Standard.png">
+        
+    </div>
+        <div class="searchbox">
+                <input type ="text" name ="search" id ="srch" placeholder="Search Here">
+                <button onclick="openSearch()"><i class="fa fa-search"></i></button>
+        </div>
+        <ul>
+            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li><a href="/Sign up/index.html"><i class="fa-solid fa-user"></i></a></li>
+            <li><a href="/vendordetails/vendor.html"><i class="fa-solid fa-shop"></i></a></li>
+            
+        </ul>
+        <div class="menu">
+            <label for="chk1">
+                <i class="fa fa-bars"></i>
+            </label>
+        </div>
+</header>
+  <body>
+    <main>
+        <div class="main-container">
+            <div class="banner">
+                <div class="banner-text">
+                    <h2>Find it, Love it</h2>
+                    <h1>Buy it</h1>
+                   <a href="#scroll"> <button class="btn">Scroll down</button></a>
+                </div>
+            </div>
+           
+            
+            <section class="section-2">
+                <div class="section-2-img">
+                    <img src="50 % off.png" alt="">
+                </div>
+                <div class="section-2-img">
+                    <img src="brand new fit.png" alt="">
+                </div>
+                <div class="section-2-img">
+                    <img src="grocery store.png" alt="">
+                </div>
+                <div class="section-2-img">
+                    <img src="fusion flavours.jpg" alt="">
+                </div>
+                <div class="section-2-img">
+                    <img src="promo.png" alt="">
+                </div>
+                <div class="section-2-img">
+                    <img src="ELECTRONIC SALE 2.png" alt="">
+                </div>
+            </section>
+            <section class="4">
+
+    <div class="container">
+        <div class="slider">
+            <div class="box1">
+            </div>
+            <div class="box2">
+            </div>
+            <div class="box3">
+            </div>
+            <div class="box4">
+            </div>
+            <div class="box5">
+            </div>
+            <div class="box6">
+            </div>
+            <div class="box7">
+            </div>
+        </div>
+    </div>
+    <div id="test"></div>
+
+
+    <!-- Js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        function rotate() {
+            var lastChild = $('.slider div:last-child').clone();
+            /$('#test').html(lastChild)/
+            $('.slider div').removeClass('firstSlide')
+            $('.slider div:last-child').remove();
+            $('.slider').prepend(lastChild)
+            $(lastChild).addClass('firstSlide')
+        }
+
+        window.setInterval(function () {
+            rotate()
+        }, 2000);
+
+        function openSearch() {
+            window.location.href = "/search/search.html?query=" + document.querySelector("#srch").value;
+        }
+
+    </script>
+
+            </section>
+           <div id="scroll">
+            <section class="section-3">
+                <div class="categories" id="Categories">
+                    <div class="col-4">
+                        <div>
+                            <a href="/restaurantlist/rest.html"><img src="resttt.png" id="resttt" height="220px" width="330px"></a>
+                        </div>
+                        <div>
+                            <a href="/medicallist/meidcal.html"><img src="pharmacy.png" id="pharmacy" height="220px" width="330px"></a>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div>
+                           <a href=""> <img src="grocery.png" alt="Supplements 1" height="220px" width="330px"></a>
+                        </div>
+                        <div>
+                            <a href="/mechanic/mechanic.html"><img src="mechanic (2).png"   height="220px" width="330px"></a>
+                        </div>
+                    </div>
+                </div>
+          
+            </section>
+           </div>
+            
+       
+    </main>
+
+
+   
+
+    <footer>
+        <div class="row">
+            <div class="col">
+                <div class="logo2"><img src="1707658661437-Standard.png"></div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, necessitatibus rerum non itaque molestias possimus maiores praesentium quam, perferendis voluptatum corporis sunt voluptas aliquam, similique voluptates quos animi eaque atque.</p>
+
+4
+
+            </div>
+            <div class="col">
+                <h3>Office<div class="underline"><span></span></div></h3>
+                <p>Baddi</p>
+                <p>Himachal pradesh</p>
+                <p>District solan,173205</p>
+                <p class="email">citypulse@gmail.com</p>
+                <h4>8263844288</h4>
+            </div>
+            <div class="col">
+                <h3>Links<div class="underline"><span></span></h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>Newsletter<div class="underline"><span></span></h3>
+                <form>
+                    <input type="email" placeholder="Enter your email here">
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+    
+    </footer>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
