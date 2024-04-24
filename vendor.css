@@ -1,0 +1,87 @@
+body {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Add the background-image property with the full-size image */
+    background-image: url('Untitled\ design\ \(1\).png');
+    background-size:cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(90px);
+   
+    
+  }
+ 
+ form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-image: url("bgbg2.png");
+    background-size: cover;
+   opacity: 50px;
+ }
+ 
+ h2, h3 {
+    margin-top: 0;
+    text-align: center;
+    font-family: serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600px;
+    text-decoration:underline;
+ }
+ 
+ label {
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style:italic;
+ }
+ 
+ input[type="text"],
+ input[type="email"],
+ input[type="tel"],
+ textarea {
+    width: calc(100% - 12px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+ }
+ 
+ input[type="checkbox"] {
+    margin-right: 5px;
+ }
+ 
+ input[type="submit"] {
+    background-color: #43bc47;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+ }
+ 
+ input[type="submit"]:hover {
+    background-color: #45a049;
+ }
+ 
+ p {
+    margin-top: 0;
+ }
+ 
+ /* Style for file input */
+ input[type="file"] {
+    margin-bottom: 10px;
+ }
+ 
+ /* Style for terms and conditions */
+ p {
+    font-size: 14px;
+ }

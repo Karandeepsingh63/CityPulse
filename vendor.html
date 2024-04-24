@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Market Details Form</title>
+    <link rel="stylesheet" href="vendor.css">
+    <script src="form.js"></script>
+</head>
+<body>
+    <h2>Vendor Market Details Form</h2>
+    <form action="submit.php" method="post" enctype="multipart/form-data">
+        <h3>Vendor Information:</h3>
+        <label for="vendor_name">Vendor Name:</label><br>
+        <input type="text" id="vendor_name" name="vendor_name" required><br>
+        <label for="contact_person">Contact Person:</label><br>
+        <input type="text" id="contact_person" name="contact_person" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="phone_number">Phone Number:</label><br>
+        <input type="tel" id="phone_number" name="phone_number" required><br>
+        <label for="business_name">Business Name (if different):</label><br>
+        <input type="text" id="business_name" name="business_name"><br>
+
+        <h3>Product Details:</h3>
+        <label for="product_name">Product Name:</label><br>
+        <input type="text" id="product_name" name="product_name" required><br>
+        <label for="product_description">Product Description:</label><br>
+        <textarea id="product_description" name="product_description" required></textarea><br>
+        <label for="category">Category:</label><br>
+        <input type="text" id="category" name="category" required><br>
+        <label for="price_per_unit">Price per Unit:</label><br>
+        <input type="text" id="price_per_unit" name="price_per_unit" required><br>
+        <label for="available_quantity">Available Quantity:</label><br>
+        <input type="text" id="available_quantity" name="available_quantity" required><br>
+        <label for="packaging_type">Packaging Type:</label><br>
+        <input type="text" id="packaging_type" name="packaging_type" required><br>
+        <label for="production_date">Production/Expiration Date:</label><br>
+        <input type="text" id="production_date" name="production_date" required><br>
+        <label for="special_offers">Special Offers/Discounts (if any):</label><br>
+        <input type="text" id="special_offers" name="special_offers"><br>
+
+        <h3>Additional Information:</h3>
+        <label for="samples_available">Are samples available?</label>
+        <input type="checkbox" id="samples_available" name="samples_available" value="Yes">
+        <label for="samples_available">Yes</label>
+        <input type="checkbox" id="samples_not_available" name="samples_available" value="No">
+        <label for="samples_not_available">No</label><br>
+        <label for="delivery_available">Do you offer delivery?</label>
+        <input type="checkbox" id="delivery_available" name="delivery_available" value="Yes">
+        <label for="delivery_available">Yes</label>
+        <input type="checkbox" id="delivery_not_available" name="delivery_available" value="No">
+        <label for="delivery_not_available">No</label><br>
+
+        <h3>Upload Product Images:</h3>
+        <input type="file" id="product_images" name="product_images[]" multiple accept="image/*"><br>
+
+        <h3>Terms and Conditions:</h3>
+        <p>By submitting this form, you agree to abide by the rules and regulations set forth by [Your Market Name]. [Your Market Name] reserves the right to approve or deny any product submissions.</p>
+
+        <input type="submit" value="Submit Form">
+    </form>
+</body>
+</html>
