@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <header>
+        <h1>Secure Payment Gateway</h1>
+    </header>
+    <div class="container">
+        <div class="payment-options">
+            <h2>Select Payment Method</h2>
+            <select id="payment-method">
+                <option value="card">Credit/Debit Card</option>
+                <option value="upi">UPI</option>
+                <option value="cod">Cash on Delivery</option>
+            </select>
+            <div id="payment-form" class="hidden">
+                <form id="card-payment-form" class="payment-type">
+                    <h2>Enter Card Details</h2>
+                    <div class="form-group">
+                        <label for="card-type">Card Type:</label>
+                        <select id="card-type">
+                            <option value="visa">Visa</option>
+                            <option value="mastercard">Mastercard</option>
+                            <option value="amex">American Express</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-number">Card Number:</label>
+                        <input type="text" id="card-number" placeholder="Enter card number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="expiry-date">Expiry Date:</label>
+                        <input type="text" id="expiry-date" placeholder="MM/YYYY" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV:</label>
+                        <input type="text" id="cvv" placeholder="CVV" required>
+                    </div>
+                    <button type="submit">Pay Now</button>
+                </form>
+                <form id="upi-payment-form" class="payment-type hidden">
+                    <h2>Enter UPI ID</h2>
+                    <div class="form-group">
+                        <label for="upi-id">UPI ID:</label>
+                        <input type="text" id="upi-id" placeholder="Enter UPI ID" required>
+                    </div>
+                    <button type="submit">Pay Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="payment.js"></script>
+</body>
+</html>
