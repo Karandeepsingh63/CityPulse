@@ -1,136 +1,347 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap'); 
-
-* { 
-	margin: 0; 
-	padding: 0; 
-	box-sizing: border-box; 
-	border: none; 
-	outline: none; 
-	font-family: 'Poppins', sans-serif; 
-	text-transform: capitalize; 
-	transition: all 0.2s linear; 
-} 
-
-.container { 
-	display: flex; 
-	justify-content: center; 
-	align-items: center; 
-	min-height: 100vh; 
-	padding: 25px; 
-	background: #d6eef1; 
-} 
-
-.container form { 
-	width: 700px; 
-	padding: 20px; 
-	background: #fff; 
-	box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2); 
-} 
-
-.container form .row { 
-	display: flex; 
-	flex-wrap: wrap; 
-	gap: 15px; 
-} 
-
-.container form .row .col { 
-	flex: 1 1 250px; 
-} 
-
-.col .title { 
-	font-size: 20px; 
-	color: rgb(237, 55, 23); 
-	padding-bottom: 5px; 
-} 
-
-.col .inputBox { 
-	margin: 15px 0; 
-} 
-
-.col .inputBox label { 
-	margin-bottom: 10px; 
-	display: block; 
-} 
-
-.col .inputBox input, 
-.col .inputBox select { 
-	width: 100%; 
-	border: 1px solid #ccc; 
-	padding: 10px 15px; 
-	font-size: 15px; 
-} 
-
-.col .inputBox input:focus, 
-.col .inputBox select:focus { 
-	border: 1px solid #000; 
-} 
-
-.col .flex { 
-	display: flex; 
-	gap: 15px; 
-} 
-
-.col .flex .inputBox { 
-	flex: 1 1; 
-	margin-top: 5px; 
-} 
-
-.col .inputBox img { 
-	height: 34px; 
-	margin-top: 5px; 
-	filter: drop-shadow(0 0 1px #000); 
-} 
-
-.container form .submit_btn { 
-	width: 100%; 
-	padding: 12px; 
-	font-size: 17px; 
-	background: rgb(1, 143, 34); 
-	color: #fff; 
-	margin-top: 5px; 
-	cursor: pointer; 
-	letter-spacing: 1px; 
-} 
-
-.container form .submit_btn:hover { 
-	background: #3d17fb; 
-} 
-
-input::-webkit-inner-spin-button, 
-input::-webkit-outer-spin-button { 
-	display: none; 
-}
-/* Add this CSS to style the modal */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('background.jpg'); /* Replace 'background.jpg' with your image path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Fixed background */
 }
 
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
+.container {
   padding: 20px;
-  border: 1px solid #888;
-  width: 50%;
 }
 
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+header {
+  text-align: center;
+  padding: 20px 0;
+  color: #fff;
 }
 
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
+.payment-options {
+  background-color: rgba(255, 255, 255, 0.8); /* Background color with opacity */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for container */
+}
+
+.payment-options h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.payment-options select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.payment-type {
+  background-color: rgba(255, 255, 255, 0.8); /* Background color with opacity */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for container */
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.hidden {
+  display: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background.jpg'); /* Overlay with gradient */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Fixed background */
+  color: #fff; /* Text color */
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+  color: #ff7f50; /* Header color */
+}
+
+.container {
+  padding: 20px;
+}
+
+.payment-options {
+  background-color: rgba(255, 255, 255, 0.8); /* Light background color with opacity */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for container */
+}
+
+.payment-options h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.payment-options select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f0f8ff; /* Select background color */
+}
+
+.payment-type {
+  background-color: rgba(255, 255, 255, 0.8); /* Light background color with opacity */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for container */
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f0f8ff; /* Input background color */
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #ff7f50; /* Button background color */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff6347; /* Button background color on hover */
+}
+
+.hidden {
+  display: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0; /* Background color */
+  color: #333; /* Text color */
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+  color: #ff4500; /* Header color */
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.payment-options {
+  background-color: #fff; /* White background */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.payment-options h2 {
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: #333; /* Dark text color */
+}
+
+.payment-options select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9; /* Light background for select */
+  color: #555; /* Placeholder color */
+}
+
+.payment-type {
+  background-color: #fff; /* White background */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333; /* Dark text color */
+}
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9; /* Light background for inputs */
+  color: #555; /* Text color */
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background-color: #ff4500; /* Button color */
+  color: #fff; /* Button text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff6347; /* Button color on hover */
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('https://source.unsplash.com/1920x1080/?payment'); /* Background image from Unsplash */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #333; /* Text color */
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+  color: #ff4500; /* Header color */
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* Background color with opacity */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.payment-options {
+  padding: 30px;
+}
+
+.payment-options h2 {
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: #333; /* Dark text color */
+}
+
+.payment-options select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9; /* Light background for select */
+  color: #555; /* Placeholder color */
+}
+
+.payment-type {
+  padding: 30px;
+  margin-top: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333; /* Dark text color */
+}
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9; /* Light background for inputs */
+  color: #555; /* Text color */
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background-color: #ff4500; /* Button color */
+  color: #fff; /* Button text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff6347; /* Button color on hover */
+}
+.payment-options {
+  padding: 30px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9)); /* Gradient background */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
