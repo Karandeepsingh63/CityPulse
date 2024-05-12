@@ -4,9 +4,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Here you can perform any necessary form validation or submission to the server
 
-        // Assuming the order is successfully placed, show a popup
-        window.alert("Order placed successfully!");
+        // Assuming the order is successfully placed, show the modal
+        document.getElementById("modal").style.display = "block";
     });
+});
+
+// Close the modal when the user clicks on the close button or anywhere outside the modal
+document.addEventListener("click", function (event) {
+    if (event.target == document.getElementById("modal") || event.target.classList.contains("close")) {
+        document.getElementById("modal").style.display = "none";
+    }
 });
 
 let cardNumInput = document.querySelector('#cardNum');
