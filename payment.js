@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Here you can perform any necessary form validation or submission to the server
 
         // Assuming the order is successfully placed, show a popup
-        alert("Order placed successfully!");
+        window.alert("Order placed successfully!");
     });
 });
 
