@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0; 
+    background-image:url('photomenu.png');
+}
+
+
+nav {
+    padding: 1.5rem;
+}
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    color: brown;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    font-weight: 900;
+    transition: all 0.5s ease-in-out; /* add transition effect */
+  }
+  
+  h1:hover {
+    color:black; /* change color on hover */
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* increase text shadow on hover */
+    transform: scale(1.1); /* add scale effect on hover */
+  }
+  
+  h1 {
+    animation: pulse 2s infinite; /* add pulse animation */
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+.menu-header{
+    border: 2px solid rosybrown;
+    border-radius: 3px;
+    
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.menu-header {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.menu-header h2 {
+    font-family: var(--script);
+}
+
+.menu-header p {
+    padding: 1.5rem 0;
+}
+.menu-item,h3{
+    text-align: center;
+    border:1px red;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.menu-item ,p{
+    border: 1px solid ;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration-color: brown;
+    letter-spacing: 1px;
+
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+p:hover {
+    background-color: lavender;
+    color: darkslateblue;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+  }
+  .menu-container {
+    margin: 0 auto;
+    max-width: 1300px;
+    padding: 0 1rem;
+    background-color: lightyellow; /* add a light gray background */
+    border: 1px solid #ddd; /* add a subtle border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* add a slight shadow */
+    border-radius: 10px; /* add a rounded corner effect */
+     
+}
+.menu-items:hover{
+    color: darkslateblue;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.menu-item {
+    border-radius: 4px;
+    background: var(--lightgray);
+    color: var(--black);
+    margin: 0.6rem 0;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.75);
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item img {
+    border-radius: 4px;
+    width: 100%;
+}
+
+.menu-item h3 {
+    margin-top: 0;
+}
+
+.menu-item p {
+    margin-bottom: 0.5rem;
+}
+
+.menu-item:hover {
+    background: var(--darkgray);
+    color: var(--white);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
